@@ -6,7 +6,7 @@
 
     <title>KieAn Tutorial Center | We Care to Learn</title>
     <meta name="description" content="KieAn Tutorial Center provides personalized academic support through face-to-face and online tutoring programs across Cavite and Laguna.">
-    <link rel="icon" type="image/png" href="kiean-icon.png">
+    <link rel="icon" type="image/png" href="assets/kiean-icon.png">
 
     <link rel="stylesheet" href="style.css">
 
@@ -20,7 +20,7 @@
 <header class="site-header">
     <div class="container nav-wrap">
         <a href="#" class="brand">
-            <img src="kiean-logo.png" alt="KieAn Tutorial Center">
+            <img src="assets/kiean-logo.png" alt="KieAn Tutorial Center">
         </a>
 
         <nav class="desktop-nav">
@@ -358,7 +358,7 @@
                 </article>
 
                 <article class="program-card accent-blue">
-                    <img class="program-logo" src="kiddiecare.jpeg" alt="KieAn Kiddie Care logo">
+                    <img class="program-logo" src="assets/kiddiecare.jpeg" alt="KieAn Kiddie Care logo">
                     <h3>KieAn Kiddie Care</h3>
                     <p>
                         Learn, play and care program available exclusively
@@ -464,9 +464,6 @@
                         Barangay Inocencio,<br>
                         Trece Martires City, Cavite
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('Trece Martires')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -478,9 +475,6 @@
                         Pasong Kawayan II,<br>
                         General Trias, Cavite
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('Natania Homes')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -492,9 +486,6 @@
                         Barangay Manggahan,<br>
                         General Trias, Cavite
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('Manggahan')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -506,9 +497,6 @@
                         Barangay San Francisco,<br>
                         General Trias, Cavite
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('San Francisco')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -519,9 +507,6 @@
                         Pasong Kawayan II,<br>
                         General Trias, Cavite
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('South Square')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -532,9 +517,6 @@
                         Mabini Street,<br>
                         Pila, Laguna
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('Pila, Laguna')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -545,11 +527,22 @@
                         Chrysanthemum Village,<br>
                         San Pedro, Laguna
                     </p>
-                    <button class="branch-book" type="button" onclick="openBranchCalendly('San Pedro, Laguna')">
-                        Book a Face-to-Face Class →
-                    </button>
                 </article>
 
+            </div>
+
+            <div class="branch-booking">
+                <div>
+                    <div class="section-kicker">
+                        <span>BOOK YOUR VISIT</span>
+                    </div>
+                    <h3>Ready to learn at a branch?</h3>
+                    <p>Choose your preferred location to view its face-to-face class schedule.</p>
+                </div>
+
+                <button class="btn btn-orange btn-large" type="button" onclick="openBranchPicker()">
+                    Choose a Location →
+                </button>
             </div>
         </div>
     </section>
@@ -574,14 +567,18 @@
             <div class="leadership-grid">
 
                 <article class="leader-card">
-                    <div class="leader-avatar blue-avatar">KP</div>
+                    <div class="leader-photo kierlle-photo">
+                        <img src="assets/kiean-kierlle.jpg" alt="Kierlle B. Piad, owner and founder of KieAn Tutorial Center">
+                    </div>
                     <h3>Kierlle B. Piad</h3>
                     <span>Owner & Founder</span>
                     <p>Bachelor of Elementary Education</p>
                 </article>
 
                 <article class="leader-card">
-                    <div class="leader-avatar orange-avatar">AP</div>
+                    <div class="leader-photo anthony-photo">
+                        <img src="assets/kiean-anthony.jpg" alt="Anthony S. Piad, co-founder of KieAn Tutorial Center">
+                    </div>
                     <h3>Anthony S. Piad</h3>
                     <span>Co-founder</span>
                     <p>Bachelor of Elementary Education</p>
@@ -720,7 +717,7 @@
     <div class="container footer-grid">
 
         <div class="footer-brand">
-            <img src="kiean-logo.png" alt="KieAn Tutorial Center">
+            <img src="assets/kiean-logo.png" alt="KieAn Tutorial Center">
 
             <p>
                 Quality learning support through personalized instruction,
@@ -762,6 +759,38 @@
 
 
 <!-- CALENDLY MODAL -->
+<div class="modal" id="locationPickerModal" aria-hidden="true">
+    <div class="modal-overlay" onclick="closeBranchPicker()"></div>
+
+    <div class="modal-dialog location-picker-dialog" role="dialog" aria-modal="true" aria-labelledby="locationPickerTitle">
+        <button class="modal-close" type="button" onclick="closeBranchPicker()" aria-label="Close location picker">
+            ×
+        </button>
+
+        <div class="location-picker">
+            <span>FACE-TO-FACE CLASSES</span>
+            <h2 id="locationPickerTitle">Choose your location</h2>
+            <p>Select a branch to open its booking calendar.</p>
+
+            <label for="branchSelect">Branch location</label>
+            <select id="branchSelect">
+                <option value="">Select a branch</option>
+                <option value="Trece Martires">Trece Martires</option>
+                <option value="Natania Homes">Natania Homes</option>
+                <option value="Manggahan">Manggahan</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="South Square">South Square</option>
+                <option value="Pila, Laguna">Pila, Laguna</option>
+                <option value="San Pedro, Laguna">San Pedro, Laguna</option>
+            </select>
+
+            <button class="btn btn-orange btn-large" type="button" onclick="continueToBranchCalendly()">
+                Continue to Booking →
+            </button>
+        </div>
+    </div>
+</div>
+
 <div class="modal" id="calendlyModal" aria-hidden="true">
     <div class="modal-overlay" onclick="closeCalendly()"></div>
 
@@ -801,11 +830,11 @@
         "San Pedro, Laguna": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1"
     };
 
-    function openCalendly(url = onlineCalendlyUrl, title = "Book your session", description = "Choose a convenient date and time for your 60-minute online session.") {
+    function openCalendly(url = onlineCalendlyUrl, title = "Book your session", description = "Choose a convenient date and time for your 60-minute online session.", bookingType = "ONLINE TUTORIAL") {
         const modal = document.getElementById("calendlyModal");
         const frame = document.getElementById("calendlyFrame");
 
-        document.getElementById("bookingType").textContent = url === onlineCalendlyUrl ? "ONLINE TUTORIAL" : "FACE-TO-FACE CLASS";
+        document.getElementById("bookingType").textContent = bookingType;
         document.getElementById("bookingTitle").textContent = title;
         document.getElementById("bookingDescription").textContent = description;
         frame.src = url || "about:blank";
@@ -816,13 +845,42 @@
         document.body.classList.add("modal-open");
     }
 
+    function openBranchPicker() {
+        const modal = document.getElementById("locationPickerModal");
+
+        modal.style.opacity = "1";
+        modal.style.visibility = "visible";
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+    }
+
+    function closeBranchPicker() {
+        const modal = document.getElementById("locationPickerModal");
+
+        modal.style.opacity = "";
+        modal.style.visibility = "";
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+    }
+
+    function continueToBranchCalendly() {
+        const branchName = document.getElementById("branchSelect").value;
+
+        if (!branchName) {
+            return;
+        }
+
+        closeBranchPicker();
+        openBranchCalendly(branchName);
+    }
+
     function openBranchCalendly(branchName) {
         const url = faceToFaceCalendlyLinks[branchName];
-        const description = url
-            ? `Choose a convenient date and time for a face-to-face class at ${branchName}.`
-            : `The face-to-face Calendly link for ${branchName} has not been added yet.`;
+        const description = `Choose a convenient date and time for a face-to-face class at ${branchName}.`;
 
-        openCalendly(url, `Book at ${branchName}`, description);
+        openCalendly(url, `Book at ${branchName}`, description, "FACE-TO-FACE CLASS");
     }
 
     function closeCalendly() {
@@ -844,6 +902,7 @@
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") {
             closeCalendly();
+            closeBranchPicker();
             closeMobileMenu();
         }
     });
