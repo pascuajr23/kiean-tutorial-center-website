@@ -1215,6 +1215,24 @@ img {
     background: var(--white);
 
     border: 1px solid var(--border);
+
+.branch-book {
+    margin-top: 18px;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    color: var(--orange);
+
+    font-size: 14px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.branch-book:hover {
+    color: var(--orange-dark);
+    text-decoration: underline;
+}
     border-radius: 14px;
 
     transition: 0.2s ease;

@@ -463,6 +463,9 @@
                         Barangay Inocencio,<br>
                         Trece Martires City, Cavite
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('Trece Martires')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -474,6 +477,9 @@
                         Pasong Kawayan II,<br>
                         General Trias, Cavite
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('Natania Homes')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -485,6 +491,9 @@
                         Barangay Manggahan,<br>
                         General Trias, Cavite
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('Manggahan')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -496,6 +505,9 @@
                         Barangay San Francisco,<br>
                         General Trias, Cavite
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('San Francisco')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -506,6 +518,9 @@
                         Pasong Kawayan II,<br>
                         General Trias, Cavite
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('South Square')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -516,6 +531,9 @@
                         Mabini Street,<br>
                         Pila, Laguna
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('Pila, Laguna')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
                 <article class="branch-card">
@@ -526,6 +544,9 @@
                         Chrysanthemum Village,<br>
                         San Pedro, Laguna
                     </p>
+                    <button class="branch-book" type="button" onclick="openBranchCalendly('San Pedro, Laguna')">
+                        Book a Face-to-Face Class →
+                    </button>
                 </article>
 
             </div>
@@ -749,14 +770,15 @@
         </button>
 
         <div class="modal-heading">
-            <span>ONLINE TUTORIAL</span>
-            <h2>Book your session</h2>
-            <p>Choose a convenient date and time for your 60-minute online session.</p>
+            <span id="bookingType">ONLINE TUTORIAL</span>
+            <h2 id="bookingTitle">Book your session</h2>
+            <p id="bookingDescription">Choose a convenient date and time for your 60-minute online session.</p>
         </div>
 
         <div class="calendly-frame-wrap">
             <iframe
-                src="https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1"
+                id="calendlyFrame"
+                src="about:blank"
                 title="KieAn online session booking"
                 frameborder="0">
             </iframe>
@@ -766,12 +788,40 @@
 
 
 <script>
-    function openCalendly() {
+    const onlineCalendlyUrl = "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1";
+
+    const faceToFaceCalendlyLinks = {
+        "Trece Martires": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "Natania Homes": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "Manggahan": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "San Francisco": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "South Square": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "Pila, Laguna": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
+        "San Pedro, Laguna": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1"
+    };
+
+    function openCalendly(url = onlineCalendlyUrl, title = "Book your session", description = "Choose a convenient date and time for your 60-minute online session.") {
         const modal = document.getElementById("calendlyModal");
+        const frame = document.getElementById("calendlyFrame");
+
+        document.getElementById("bookingType").textContent = url === onlineCalendlyUrl ? "ONLINE TUTORIAL" : "FACE-TO-FACE CLASS";
+        document.getElementById("bookingTitle").textContent = title;
+        document.getElementById("bookingDescription").textContent = description;
+        frame.src = url || "about:blank";
+        frame.title = title;
 
         modal.classList.add("active");
         modal.setAttribute("aria-hidden", "false");
         document.body.classList.add("modal-open");
+    }
+
+    function openBranchCalendly(branchName) {
+        const url = faceToFaceCalendlyLinks[branchName];
+        const description = url
+            ? `Choose a convenient date and time for a face-to-face class at ${branchName}.`
+            : `The face-to-face Calendly link for ${branchName} has not been added yet.`;
+
+        openCalendly(url, `Book at ${branchName}`, description);
     }
 
     function closeCalendly() {
