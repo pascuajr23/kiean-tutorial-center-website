@@ -1043,6 +1043,16 @@ img {
     font-size: 28px;
 }
 
+.program-logo {
+    width: 56px;
+    height: 56px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+    background: var(--white);
+}
+
 .program-card h3 {
     margin-top: 22px;
 
