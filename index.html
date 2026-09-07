@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KieAn Tutorial Center | We Care to Learn</title>
+    <meta name="description" content="KieAn Tutorial Center provides personalized academic support through face-to-face and online tutoring programs across Cavite and Laguna.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-wrap">
+        <a href="#" class="brand">
+            <img src="kiean-logo.png" alt="KieAn Tutorial Center">
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#about">About</a>
+            <a href="#online">Online Tutorial</a>
+            <a href="#programs">Programs</a>
+            <a href="#branches">Branches</a>
+            <a href="#investment">Partner With Us</a>
+        </nav>
+
+        <button class="btn btn-orange nav-cta" type="button" onclick="openCalendly()">
+            Book Online
+        </button>
+
+        <button class="mobile-menu-btn" type="button" aria-label="Open menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about" onclick="closeMobileMenu()">About</a>
+        <a href="#online" onclick="closeMobileMenu()">Online Tutorial</a>
+        <a href="#programs" onclick="closeMobileMenu()">Programs</a>
+        <a href="#branches" onclick="closeMobileMenu()">Branches</a>
+        <a href="#investment" onclick="closeMobileMenu()">Partner With Us</a>
+        <button class="btn btn-orange" type="button" onclick="closeMobileMenu(); openCalendly()">
+            Book an Online Session
+        </button>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-shape hero-shape-one"></div>
+        <div class="hero-shape hero-shape-two"></div>
+        <div class="hero-dots"></div>
+
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    WE CARE TO LEARN
+                </div>
+
+                <h1>
+                    Learning becomes
+                    <span class="blue-text">better</span>
+                    when children are
+                    <span class="orange-text">supported.</span>
+                </h1>
+
+                <p>
+                    KieAn Tutorial Center provides quality, affordable and
+                    personalized educational support to help every learner
+                    stay on track, build confidence and achieve academic excellence.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="btn btn-orange btn-large" type="button" onclick="openCalendly()">
+                        Book an Online Session
+                        <span class="arrow">→</span>
+                    </button>
+
+                    <a href="#programs" class="btn btn-outline btn-large">
+                        Explore Programs
+                    </a>
+                </div>
+
+                <div class="hero-info">
+                    <span class="live-dot"></span>
+                    Online sessions available until 10:00 PM
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="color-orbit orbit-blue"></div>
+                <div class="color-orbit orbit-green"></div>
+                <div class="color-orbit orbit-orange"></div>
+                <div class="color-orbit orbit-pink"></div>
+
+                <div class="hero-card">
+                    <div class="new-pill">
+                        <span>✦</span> NEW ONLINE SERVICE
+                    </div>
+
+                    <div class="hero-card-icon">💻</div>
+
+                    <h2>
+                        School work
+                        <span>doesn't have to wait.</span>
+                    </h2>
+
+                    <p>
+                        Quick online academic support when your child needs
+                        help with an assignment, module or lesson.
+                    </p>
+
+                    <div class="mini-features">
+                        <div><span>✓</span> Assignment help</div>
+                        <div><span>✓</span> Module assistance</div>
+                        <div><span>✓</span> After-class support</div>
+                        <div><span>✓</span> Class suspension support</div>
+                    </div>
+
+                    <button class="card-cta" type="button" onclick="openCalendly()">
+                        Schedule a Session →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- QUICK STATS -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat">
+                <strong>Since 2020</strong>
+                <span>Supporting learners</span>
+            </div>
+
+            <div class="stat">
+                <strong>7 Branches</strong>
+                <span>Cavite & Laguna</span>
+            </div>
+
+            <div class="stat">
+                <strong>Personalized</strong>
+                <span>Learner-centered approach</span>
+            </div>
+
+            <div class="stat">
+                <strong>Until 10 PM</strong>
+                <span>Online booking availability</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="container about-grid">
+            <div class="section-intro">
+                <div class="section-number">01</div>
+                <div class="section-kicker">ABOUT KIEAN</div>
+            </div>
+
+            <div class="about-content">
+                <h2>
+                    We care to learn.
+                    <span>We care to grow.</span>
+                </h2>
+
+                <p>
+                    KieAn Tutorial Center was established in August 2020 with
+                    a commitment to provide educational support that helps
+                    learners achieve their academic goals.
+                </p>
+
+                <p>
+                    We have reached hundreds of different learners through
+                    quality and affordable educational services. Our professional
+                    teachers and dedicated tutors help create a nurturing,
+                    conducive and effective learning environment.
+                </p>
+
+                <div class="mission-box">
+                    <div class="mission-icon">★</div>
+                    <div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To provide affordable tutoring services where every
+                            learner can experience learning through personalized
+                            instruction, a nurturing environment and a passion
+                            for lifelong learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ONLINE PROGRAM -->
+    <section class="online-section" id="online">
+        <div class="online-bubble bubble-one"></div>
+        <div class="online-bubble bubble-two"></div>
+
+        <div class="container">
+            <div class="online-top">
+                <div>
+                    <div class="section-kicker white-kicker">
+                        <span>02</span>
+                        NEW ONLINE PROGRAM
+                    </div>
+
+                    <h2>
+                        When classes are suspended,
+                        <span>learning can continue.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Not every school requirement can wait for the next class.
+                    KieAn's online sessions give learners access to focused,
+                    convenient academic support from home.
+                </p>
+            </div>
+
+            <div class="online-grid">
+                <article class="online-card">
+                    <div class="card-number">01</div>
+                    <div class="service-icon">📝</div>
+                    <h3>Quick Assignment Help</h3>
+                    <p>
+                        Get guided support when your child needs help
+                        understanding or working through an assignment.
+                    </p>
+                </article>
+
+                <article class="online-card">
+                    <div class="card-number">02</div>
+                    <div class="service-icon">📚</div>
+                    <h3>Module Assistance</h3>
+                    <p>
+                        Help learners understand their modules and complete
+                        school requirements with guided instruction.
+                    </p>
+                </article>
+
+                <article class="online-card">
+                    <div class="card-number">03</div>
+                    <div class="service-icon">🏠</div>
+                    <h3>Class Suspension Support</h3>
+                    <p>
+                        Keep learning moving even when face-to-face classes
+                        are suspended and modules still need to be completed.
+                    </p>
+                </article>
+
+                <article class="online-card">
+                    <div class="card-number">04</div>
+                    <div class="service-icon">🌙</div>
+                    <h3>Evening Sessions</h3>
+                    <p>
+                        Online sessions can be booked until 10:00 PM,
+                        giving families more flexibility after school.
+                    </p>
+                </article>
+            </div>
+
+            <div class="online-cta">
+                <div>
+                    <strong>Need help with schoolwork?</strong>
+                    <span>Choose a convenient time and book a focused online session.</span>
+                </div>
+
+                <button class="btn btn-white btn-large" type="button" onclick="openCalendly()">
+                    Book an Online Session →
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROGRAMS -->
+    <section class="section programs" id="programs">
+        <div class="container">
+            <div class="section-heading">
+                <div class="section-kicker">
+                    <span>03</span>
+                    OUR PROGRAMS
+                </div>
+
+                <h2>
+                    Learning support for
+                    <span>different stages and needs.</span>
+                </h2>
+            </div>
+
+            <div class="program-grid">
+
+                <article class="program-card accent-blue">
+                    <div class="program-icon">📖</div>
+                    <h3>Academic Tutorial</h3>
+                    <p>
+                        Personalized academic support to help learners
+                        understand lessons, strengthen skills and improve performance.
+                    </p>
+                </article>
+
+                <article class="program-card accent-pink">
+                    <div class="program-icon">🌟</div>
+                    <h3>SNED / SPED Tutorial</h3>
+                    <p>
+                        Individualized and supportive instruction designed
+                        around the learner's unique educational needs.
+                    </p>
+                </article>
+
+                <article class="program-card accent-yellow">
+                    <div class="program-icon">🧸</div>
+                    <h3>Nursery</h3>
+                    <p>
+                        Early learning experiences that build foundational
+                        skills while encouraging curiosity and confidence.
+                    </p>
+                </article>
+
+                <article class="program-card accent-green">
+                    <div class="program-icon">🎨</div>
+                    <h3>Toddler Playgroup</h3>
+                    <p>
+                        A nurturing environment where young children can
+                        learn, play, explore and develop social skills.
+                    </p>
+                </article>
+
+                <article class="program-card accent-orange featured-program">
+                    <div class="program-new">NEW</div>
+                    <div class="program-icon">💻</div>
+                    <h3>Online Tutorial</h3>
+                    <p>
+                        Convenient academic assistance for assignments,
+                        modules, lessons and school requirements.
+                    </p>
+                    <button type="button" onclick="openCalendly()">
+                        Book Online →
+                    </button>
+                </article>
+
+                <article class="program-card accent-blue">
+                    <div class="program-icon">👶</div>
+                    <h3>KieAn Kiddie Care</h3>
+                    <p>
+                        Learn, play and care program available exclusively
+                        at the South Square branch.
+                    </p>
+                </article>
+
+                <article class="program-card accent-pink">
+                    <div class="program-icon">🏫</div>
+                    <h3>Franchising</h3>
+                    <p>
+                        Bring the KieAn educational experience to your
+                        community with our business and support model.
+                    </p>
+                </article>
+
+                <article class="program-card accent-green">
+                    <div class="program-icon">🤝</div>
+                    <h3>Co-Ownership Investment</h3>
+                    <p>
+                        Opportunities to participate in the growth of
+                        existing and future KieAn ventures.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SCHEDULE -->
+    <section class="schedule-section">
+        <div class="container schedule-grid">
+            <div>
+                <div class="section-kicker">
+                    <span>04</span>
+                    CLASS SCHEDULE
+                </div>
+
+                <h2>
+                    Support when
+                    <span>you need it.</span>
+                </h2>
+
+                <p class="schedule-description">
+                    Choose face-to-face learning at our branches or book an
+                    online session when your child needs additional academic support.
+                </p>
+            </div>
+
+            <div class="schedule-box">
+                <div class="schedule-row">
+                    <div>
+                        <span class="schedule-label">Face-to-Face Classes</span>
+                        <small>All branches</small>
+                    </div>
+                    <strong>Mon – Fri<br>9 AM – 5 PM</strong>
+                </div>
+
+                <div class="schedule-row">
+                    <div>
+                        <span class="schedule-label">Online Tutorial</span>
+                        <small>Assignment & module support</small>
+                    </div>
+                    <strong>Bookable<br>until 10 PM</strong>
+                </div>
+
+                <div class="schedule-row">
+                    <div>
+                        <span class="schedule-label">San Pedro Branch</span>
+                        <small>Academic tutorial</small>
+                    </div>
+                    <strong>Flexible<br>Scheduling</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- BRANCHES -->
+    <section class="section branches" id="branches">
+        <div class="container">
+            <div class="section-heading">
+                <div class="section-kicker">
+                    <span>05</span>
+                    OUR BRANCHES
+                </div>
+
+                <h2>
+                    Growing closer
+                    <span>to our communities.</span>
+                </h2>
+            </div>
+
+            <div class="branch-grid">
+
+                <article class="branch-card">
+                    <span>01</span>
+                    <h3>Trece Martires</h3>
+                    <p>
+                        Aze Commercial Building, Unit G,<br>
+                        Indang Road, Corner Calle Vecido,<br>
+                        Barangay Inocencio,<br>
+                        Trece Martires City, Cavite
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>02</span>
+                    <h3>Natania Homes</h3>
+                    <p>
+                        Block 9, Lot 5, Phase IA,<br>
+                        Natania Homes,<br>
+                        Pasong Kawayan II,<br>
+                        General Trias, Cavite
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>03</span>
+                    <h3>Manggahan</h3>
+                    <p>
+                        Block 8, Lot 20, A&C Building,<br>
+                        Sunshine Village,<br>
+                        Barangay Manggahan,<br>
+                        General Trias, Cavite
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>04</span>
+                    <h3>San Francisco</h3>
+                    <p>
+                        Block 27, Lot 36, Phase 1,<br>
+                        Tierra Nevada,<br>
+                        Barangay San Francisco,<br>
+                        General Trias, Cavite
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>05</span>
+                    <h3>South Square</h3>
+                    <p>
+                        2F 0052,<br>
+                        Pasong Kawayan II,<br>
+                        General Trias, Cavite
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>06</span>
+                    <h3>Pila, Laguna</h3>
+                    <p>
+                        9007 A, Pedro Napil,<br>
+                        Mabini Street,<br>
+                        Pila, Laguna
+                    </p>
+                </article>
+
+                <article class="branch-card">
+                    <span>07</span>
+                    <h3>San Pedro, Laguna</h3>
+                    <p>
+                        Block 22, Lot 4, Unit E, 2nd Floor,<br>
+                        Chrysanthemum Village,<br>
+                        San Pedro, Laguna
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TEAM / VISION -->
+    <section class="leadership-section">
+        <div class="container">
+
+            <div class="leadership-heading">
+                <div class="section-kicker white-kicker">
+                    <span>06</span>
+                    OUR LEADERSHIP
+                </div>
+
+                <h2>
+                    Built by educators,
+                    <span>driven by purpose.</span>
+                </h2>
+            </div>
+
+            <div class="leadership-grid">
+
+                <article class="leader-card">
+                    <div class="leader-avatar blue-avatar">KP</div>
+                    <h3>Kierlle B. Piad</h3>
+                    <span>Owner & Founder</span>
+                    <p>Bachelor of Elementary Education</p>
+                </article>
+
+                <article class="leader-card">
+                    <div class="leader-avatar orange-avatar">AP</div>
+                    <h3>Anthony S. Piad</h3>
+                    <span>Co-founder</span>
+                    <p>Bachelor of Elementary Education</p>
+                </article>
+
+                <div class="vision-card">
+                    <div class="vision-star">✦</div>
+                    <div>
+                        <small>OUR VISION</small>
+                        <p>
+                            To become a leading provider of inclusive,
+                            high-quality academic support, recognized for
+                            exceptional service, trusted guidance and an
+                            unwavering commitment to every learner's success.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- INVESTMENT -->
+    <section class="section investment" id="investment">
+        <div class="container">
+            <div class="section-heading investment-heading">
+                <div class="section-kicker">
+                    <span>07</span>
+                    PARTNER WITH KIEAN
+                </div>
+
+                <h2>
+                    Invest with purpose.
+                    <span>Grow with confidence.</span>
+                </h2>
+
+                <p>
+                    Be part of a growing mission that shapes minds and builds futures.
+                </p>
+            </div>
+
+            <div class="investment-grid">
+
+                <article class="investment-card">
+                    <div class="investment-number">OPTION 01</div>
+                    <h3>Financial Investment</h3>
+                    <div class="rate">15% <small>fixed annual interest</small></div>
+                    <ul>
+                        <li>Secure and stable returns</li>
+                        <li>Fixed 15% annual interest rate</li>
+                        <li>Ideal for long-term growth</li>
+                        <li>Transparent and reliable</li>
+                    </ul>
+                </article>
+
+                <article class="investment-card">
+                    <div class="investment-number">OPTION 02</div>
+                    <h3>Net Profit Sharing + Co-Ownership</h3>
+                    <div class="rate">30% <small>profit sharing</small></div>
+                    <ul>
+                        <li>Invest in existing and future branches</li>
+                        <li>Share in real business profits</li>
+                        <li>Co-ownership privileges</li>
+                        <li>Growth through expansion</li>
+                    </ul>
+                </article>
+
+                <article class="investment-card">
+                    <div class="investment-number">OPTION 03</div>
+                    <h3>Franchising</h3>
+                    <div class="large-option-icon">🏫</div>
+                    <ul>
+                        <li>Proven business model</li>
+                        <li>Comprehensive training and support</li>
+                        <li>Marketing and operational assistance</li>
+                        <li>Be your own boss with a trusted brand</li>
+                    </ul>
+                </article>
+
+                <article class="investment-card new-investment">
+                    <div class="investment-number">OPTION 04</div>
+                    <span class="new-tag">NEW</span>
+                    <h3>Co-Ownership Up To 25%</h3>
+                    <div class="childcare-label">NEW BUSINESS — CHILD CARE PROGRAM</div>
+
+                    <p>
+                        A concept where parents can leave their child for a
+                        certain time while children can learn, play and receive care.
+                    </p>
+
+                    <ul>
+                        <li>High-demand business opportunity</li>
+                        <li>Meaningful impact</li>
+                        <li>Attractive returns</li>
+                        <li>Purpose-driven venture</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="cta-decoration cta-decoration-one"></div>
+        <div class="cta-decoration cta-decoration-two"></div>
+
+        <div class="container final-cta-content">
+            <div class="section-kicker white-kicker centered-kicker">
+                READY TO LEARN?
+            </div>
+
+            <h2>
+                Give your child the support
+                <span>they need to succeed.</span>
+            </h2>
+
+            <p>
+                From regular tutorials to quick assignment and module support,
+                KieAn is here to help your child stay on track.
+            </p>
+
+            <button class="btn btn-white btn-large" type="button" onclick="openCalendly()">
+                Book an Online Session →
+            </button>
+        </div>
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <img src="kiean-logo.png" alt="KieAn Tutorial Center">
+
+            <p>
+                Quality learning support through personalized instruction,
+                a nurturing environment and a passion for lifelong learning.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Programs</h4>
+            <a href="#programs">Academic Tutorial</a>
+            <a href="#programs">SNED / SPED Tutorial</a>
+            <a href="#programs">Nursery</a>
+            <a href="#programs">Toddler Playgroup</a>
+            <a href="#online">Online Tutorial</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="#about">About KieAn</a>
+            <a href="#branches">Branches</a>
+            <a href="#investment">Partner With Us</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Online Classes</h4>
+            <p>Bookable until 10:00 PM.</p>
+            <button class="footer-book" type="button" onclick="openCalendly()">
+                Book a Session →
+            </button>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <span>© 2026 KieAn Tutorial Center. All rights reserved.</span>
+        <span>We care to learn.</span>
+    </div>
+</footer>
+
+
+<!-- CALENDLY MODAL -->
+<div class="modal" id="calendlyModal" aria-hidden="true">
+    <div class="modal-overlay" onclick="closeCalendly()"></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Book an online session">
+        <button class="modal-close" type="button" onclick="closeCalendly()" aria-label="Close booking window">
+            ×
+        </button>
+
+        <div class="modal-heading">
+            <span>ONLINE TUTORIAL</span>
+            <h2>Book your session</h2>
+            <p>Choose a convenient date and time for your 60-minute online session.</p>
+        </div>
+
+        <div class="calendly-frame-wrap">
+            <iframe
+                src="https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1"
+                title="KieAn online session booking"
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function openCalendly() {
+        const modal = document.getElementById("calendlyModal");
+
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+    }
+
+    function closeCalendly() {
+        const modal = document.getElementById("calendlyModal");
+
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+    }
+
+    function toggleMobileMenu() {
+        document.getElementById("mobileNav").classList.toggle("active");
+    }
+
+    function closeMobileMenu() {
+        document.getElementById("mobileNav").classList.remove("active");
+    }
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeCalendly();
+            closeMobileMenu();
+        }
+    });
+</script>
+
+</body>
+</html>
