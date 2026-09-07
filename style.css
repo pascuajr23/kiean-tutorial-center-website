@@ -1742,6 +1742,51 @@ img {
 
 
 /* =========================================================
+   MESSENGER CONTACT
+========================================================= */
+
+.messenger-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 900;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    min-height: 58px;
+    padding: 8px 17px 8px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 32px;
+
+    background: var(--white);
+    color: var(--blue);
+    box-shadow: 0 12px 30px rgba(18, 59, 142, 0.22);
+
+    font-size: 14px;
+    font-weight: 900;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.messenger-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(18, 59, 142, 0.28);
+}
+
+.messenger-float img {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
    CALENDLY MODAL
 ========================================================= */
 
@@ -2178,6 +2223,19 @@ img {
 ========================================================= */
 
 @media (max-width: 520px) {
+
+    .messenger-float {
+        right: 14px;
+        bottom: 14px;
+        min-height: 52px;
+        padding: 6px 13px 6px 7px;
+        font-size: 13px;
+    }
+
+    .messenger-float img {
+        width: 38px;
+        height: 38px;
+    }
 
     .hero h1 {
         font-size: 41px;
