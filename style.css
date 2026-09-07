@@ -187,7 +187,7 @@ img {
 }
 
 .brand img {
-    width: 190px;
+    width: 150px;
     height: auto;
 }
 
@@ -1617,7 +1617,7 @@ img {
 }
 
 .footer-brand img {
-    width: 190px;
+    width: 150px;
 
     /* The original logo has a white background,
        so it works well against a light footer card. */
@@ -1888,7 +1888,7 @@ img {
     }
 
     .brand img {
-        width: 155px;
+        width: 128px;
     }
 
     .desktop-nav,
@@ -2151,5 +2151,147 @@ img {
     .calendly-frame-wrap,
     .calendly-frame-wrap iframe {
         height: 680px;
+    }
+}
+
+
+/* =========================================================
+   READABILITY PASS
+========================================================= */
+
+body {
+    font-size: 17px;
+}
+
+.desktop-nav a {
+    font-size: 14px;
+}
+
+.btn {
+    font-size: 15px;
+}
+
+.eyebrow,
+.section-kicker {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.hero-copy > p,
+.about-content > p {
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.hero-info {
+    font-size: 14px;
+}
+
+.new-pill {
+    font-size: 11px;
+}
+
+.hero-card > p {
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.mini-features div {
+    font-size: 15px;
+}
+
+.card-cta {
+    font-size: 15px;
+}
+
+.stat strong {
+    font-size: 22px;
+}
+
+.stat span,
+.section-number {
+    font-size: 13px;
+}
+
+.mission-box p,
+.online-top > p,
+.schedule-description,
+.investment-heading > p {
+    font-size: 16px;
+}
+
+.online-card p,
+.program-card p,
+.branch-card p,
+.new-investment > p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.card-number,
+.branch-card > span,
+.investment-number,
+.childcare-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.online-card h3,
+.program-card h3,
+.branch-card h3 {
+    font-size: 24px;
+}
+
+.online-cta span {
+    font-size: 14px;
+}
+
+.schedule-label {
+    font-size: 17px;
+}
+
+.schedule-row small,
+.schedule-row strong {
+    font-size: 14px;
+}
+
+.leader-card > span,
+.leader-card p,
+.vision-card small,
+.investment-card ul,
+.rate small,
+.new-tag {
+    font-size: 13px;
+}
+
+.vision-card p {
+    font-size: 16px;
+}
+
+.footer-brand p,
+.footer-column a,
+.footer-column > p,
+.footer-book {
+    font-size: 14px;
+}
+
+.footer-column h4,
+.footer-bottom {
+    font-size: 12px;
+}
+
+.modal-heading > span,
+.modal-heading p {
+    font-size: 13px;
+}
+
+@media (max-width: 780px) {
+    .mobile-nav a {
+        font-size: 16px;
+    }
+
+    .hero-copy > p,
+    .about-content > p {
+        font-size: 17px;
     }
 }
