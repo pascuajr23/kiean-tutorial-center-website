@@ -817,6 +817,10 @@
         </div>
 
         <div class="calendly-frame-wrap">
+            <div class="calendly-loader" id="calendlyLoader" role="status" aria-live="polite">
+                <span class="loader-spinner" aria-hidden="true"></span>
+                <span>Please wait while booking loads...</span>
+            </div>
             <iframe
                 id="calendlyFrame"
                 src="about:blank"
@@ -832,23 +836,40 @@
     const onlineCalendlyUrl = "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1";
 
     const faceToFaceCalendlyLinks = {
-        "Trece Martires": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "Natania Homes": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "Manggahan": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "San Francisco": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "South Square": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "Pila, Laguna": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1",
-        "San Pedro, Laguna": "https://calendly.com/d/dz8z-77v-rf2/60-mins-online-session?hide_gdpr_banner=1"
+        "Trece Martires": "https://calendly.com/solcredio-council",
+        "Natania Homes": "https://calendly.com/solcredio-council",
+        "Manggahan": "https://calendly.com/solcredio-council",
+        "San Francisco": "https://calendly.com/solcredio-council",
+        "South Square": "https://calendly.com/solcredio-council",
+        "Pila, Laguna": "https://calendly.com/solcredio-council",
+        "San Pedro, Laguna": "https://calendly.com/solcredio-council"
     };
+
+    function getFreshCalendlyUrl(url) {
+        if (!url) {
+            return "about:blank";
+        }
+
+        const separator = url.includes("?") ? "&" : "?";
+        return `${url}${separator}reset=${Date.now()}`;
+    }
 
     function openCalendly(url = onlineCalendlyUrl, title = "Book your session", description = "Choose a convenient date and time for your 60-minute online session.", bookingType = "ONLINE TUTORIAL") {
         const modal = document.getElementById("calendlyModal");
-        const frame = document.getElementById("calendlyFrame");
+        const currentFrame = document.getElementById("calendlyFrame");
+        const frame = currentFrame.cloneNode(true);
+
+        frame.src = "about:blank";
+        currentFrame.replaceWith(frame);
 
         document.getElementById("bookingType").textContent = bookingType;
         document.getElementById("bookingTitle").textContent = title;
         document.getElementById("bookingDescription").textContent = description;
-        frame.src = url || "about:blank";
+        document.getElementById("calendlyLoader").classList.add("active");
+        frame.addEventListener("load", function() {
+            document.getElementById("calendlyLoader").classList.remove("active");
+        }, { once: true });
+        frame.src = getFreshCalendlyUrl(url);
         frame.title = title;
 
         modal.classList.add("active");
@@ -896,9 +917,12 @@
 
     function closeCalendly() {
         const modal = document.getElementById("calendlyModal");
+        const frame = document.getElementById("calendlyFrame");
 
         modal.classList.remove("active");
         modal.setAttribute("aria-hidden", "true");
+        frame.src = "about:blank";
+        document.getElementById("calendlyLoader").classList.add("active");
         document.body.classList.remove("modal-open");
     }
 
