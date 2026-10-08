@@ -2,6 +2,17 @@
 
 ## Run with Docker Compose
 
+This project uses the following Compose configuration:
+
+```yaml
+services:
+  website:
+    build: .
+    ports:
+      - "3001:80"
+    restart: unless-stopped
+```
+
 From the repository root, build and start the website:
 
 ```sh
