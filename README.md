@@ -1,30 +1,28 @@
 # KieAn Tutorial Center Website
 
-## Run with Docker Compose
+## Run from GitHub Packages
 
-This project uses the following Compose configuration:
-
-```yaml
-services:
-  website:
-    build: .
-    ports:
-      - "3001:80"
-    restart: unless-stopped
-```
-
-From the repository root, build and start the website:
+Build and publish the Docker image to GitHub Packages:
 
 ```sh
-docker compose up --build -d
+docker build -t ghcr.io/<OWNER>/kiean-tutorial-center-website:latest .
+docker push ghcr.io/<OWNER>/kiean-tutorial-center-website:latest
+```
+
+Then run it locally from the published package:
+
+```sh
+docker pull ghcr.io/<OWNER>/kiean-tutorial-center-website:latest
+docker run -d --name kiean-tutorial-center-website -p 3001:80 ghcr.io/<OWNER>/kiean-tutorial-center-website:latest
 ```
 
 Open [http://localhost:3001](http://localhost:3001).
 
-To stop the website:
+To stop the container:
 
 ```sh
-docker compose down
+docker stop kiean-tutorial-center-website
+docker rm kiean-tutorial-center-website
 ```
 
 GitHub Actions builds the Docker image on every push and pull request.
